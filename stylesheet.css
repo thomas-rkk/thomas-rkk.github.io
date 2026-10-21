@@ -1,0 +1,302 @@
+/* General Reset & Styles */
+body {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14.5px;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px 0;
+}
+
+a {
+  color: #1772d2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #f09228;
+  text-decoration: underline;
+}
+
+/* Layout - Center Container Table */
+.main-table {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* Inner tables styling */
+.intro-table,
+.section-table,
+.projects-table,
+.footer-table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.intro-table {
+  margin-bottom: 25px;
+}
+
+.intro-table td {
+  padding: 15px;
+}
+
+/* Bio Content & Profile Image */
+.bio-cell {
+  width: 65%;
+  text-align: left;
+}
+
+.photo-cell {
+  width: 35%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.profile-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f4f4f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.name-header {
+  font-size: 34px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+}
+
+.bio-text {
+  margin: 0 0 15px 0;
+  color: #4a4a4a;
+}
+
+.links-paragraph {
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Sections & Headings */
+.section-table {
+  margin-top: 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-header-cell {
+  padding: 10px 15px 5px 15px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-subtext {
+  font-size: 13.5px;
+  color: #666666;
+  margin: 0 0 10px 0;
+  font-style: italic;
+}
+
+/* Project / Paper Row styling */
+.projects-table {
+  margin-top: 15px;
+}
+
+.project-row td {
+  padding: 20px 15px;
+  border-bottom: 1px dashed #f3f4f6;
+}
+
+.project-row:last-child td {
+  border-bottom: 0;
+}
+
+.project-thumb-cell {
+  width: 25%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.project-description-cell {
+  width: 75%;
+  vertical-align: top;
+  text-align: left;
+}
+
+.thumb-container {
+  width: 160px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  background-color: #fcfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.project-thumb:hover {
+  transform: scale(1.04);
+}
+
+/* Placeholder for thumbnail cells that don't have images */
+.project-thumb-placeholder {
+  width: 160px;
+  height: 120px;
+  border-radius: 6px;
+  border: 1px dashed #cbd5e1;
+  background-color: #f8fafc;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project-thumb-placeholder.font-small {
+  font-size: 11.5px;
+}
+
+/* Project Text Details */
+.project-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 6px 0;
+}
+
+.project-authors {
+  font-size: 13.5px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.project-venue {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.project-links {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.project-abstract {
+  font-size: 13.5px;
+  color: #555555;
+  margin: 0;
+}
+
+/* Footer styling */
+.footer-table {
+  margin-top: 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-cell {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .main-table {
+    width: 100%;
+  }
+
+  /* Make cells stack vertically */
+  .intro-table tr,
+  .projects-table tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .intro-table tr {
+    align-items: center;
+  }
+
+  .bio-cell,
+  .photo-cell,
+  .project-thumb-cell,
+  .project-description-cell {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .bio-cell {
+    order: 2;
+    padding: 15px 10px !important;
+  }
+
+  .photo-cell {
+    order: 1;
+    padding: 20px 10px !important;
+  }
+
+  .project-thumb-cell {
+    padding: 15px 10px 0 10px !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-description-cell {
+    padding: 10px 10px 20px 10px !important;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .thumb-container,
+  .project-thumb-placeholder {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    /* Wider ratio for mobile blocks */
+  }
+}
